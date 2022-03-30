@@ -17,7 +17,10 @@ class Book_db(ndb.Model):
 class MainPage(webapp2.RequestHandler):
     def get(self):
         template = JINJA_ENVIRONMENT.get_template('index.html')
-        self.response.write(template.render({}))
+        query = ndb.gql("SELECT Book FROM Book_db ")
+        values = {'query': query}
+        self.response.write(template.render(values))
+
 
 
 class Add_Data(webapp2.RequestHandler):
