@@ -2,14 +2,12 @@
 <head></head>
 <body>
 
-{% for data in query %}
-<div>{{data.Book}}</div>>
-{% endfor %}
 
 <form action="/add_data" method="post">
         Add Book <input type="text" name="book_input"><br/>
         <input type="submit" value="Submit">
 </form>
+<br>
 {% for data in query %}
 <div>{{data.Book}}</div>
 {% endfor %}
