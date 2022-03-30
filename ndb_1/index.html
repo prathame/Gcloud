@@ -10,5 +10,9 @@
         Add Book <input type="text" name="book_input"><br/>
         <input type="submit" value="Submit">
 </form>
+{% for data in query %}
+<div>{{data.Book}}</div>>
+{% endfor %}
+
 </body>
 </html>
